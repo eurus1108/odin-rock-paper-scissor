@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Press+Start+2P&display=swap");
+
+:root {
+  --ff-default: "Barlow Condensed", "Press Start 2P", sans-serif;
+  --ff-accent: "Press Start 2P", sans-serif;
+
+  --text-xs: 1rem;
+  --text-sm: 1.125rem;
+  --text-base: 1.5rem;
+  --text-md: 2.25rem;
+  --text-lg: 2.5rem;
+  --text-xl: 4.5rem;
+  --text-2xl: 6rem;
+
+  --rounded-sm: 0.25rem;
+  --rounded-md: 0.5rem;
+  --rounder-lg: 1rem;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 2.5rem;
+  --spacing-3xl: 3rem;
+
+  --orange: #d88a2f;
+  --neutral-100: #ffffff;
+  --neutral-200: #252d37;
+  --neutral-300: #121417;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-default);
+  font-size: var(--text-base);
+  color: var(--neutral-100);
+  background-color: var(--neutral-300);
+}
+
+h1 {
+  font-size: var(--text-lg);
+}
+
+h2 {
+  font-size: var(--text-md);
+}
