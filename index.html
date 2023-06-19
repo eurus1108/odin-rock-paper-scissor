@@ -5,7 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
     <script src="./js/script.js" defer></script>
-    <title>Document</title>
+    <title>Odin - Rock Paper Scissor</title>
   </head>
-  <body></body>
+  <body>
+    <main class="h-wrapper">
+      <header class="header">
+        <h1 class="header__title">Rock Paper Scissor</h1>
+      </header>
+      <section class="game-field">
+        <h2 class="game-field__result">Choose your weapon</h2>
+        <div class="game-field__scores">
+          <div class="player-score" id="human">
+            <div class="player-picked">
+              <img src="./assets/icon-rock.svg" alt="" />
+              <p class="player-score">
+                Player: <span id="human-score">0</span>
+              </p>
+            </div>
+          </div>
+          <div class="player-score">
+            <div class="player-picked" id="computer">
+              <img src="./assets/icon-rock.svg" alt="" />
+              <p class="player-score">
+                Player: <span id="computer-score">0</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="game-field__options">
+          <div class="options__container">
+            <button class="button-options" id="rock">
+              <img src="./assets/icon-rock.svg" alt="rock" />
+            </button>
+            <button class="button-options" id="paper">
+              <img src="./assets/icon-paper.svg" alt="paper" />
+            </button>
+            <button class="button-options" id="scissor">
+              <img src="./assets/icon-scissors.svg" alt="scissor" />
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
