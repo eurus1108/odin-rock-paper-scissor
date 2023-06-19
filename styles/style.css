@@ -23,8 +23,9 @@
   --spacing-xl: 2rem;
   --spacing-2xl: 2.5rem;
   --spacing-3xl: 3rem;
+  --spacing-4xl: 4.125rem;
 
-  --orange: #d88a2f;
+  --orange: #f59c37;
   --neutral-100: #ffffff;
   --neutral-200: #252d37;
   --neutral-300: #121417;
@@ -49,4 +50,88 @@ h1 {
 
 h2 {
   font-size: var(--text-md);
+}
+
+.hidden {
+  display: none;
+}
+
+.h-wrapper {
+  margin-top: 6.25rem;
+  padding-inline: var(--spacing-lg);
+}
+
+.header {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.header__title {
+  font-family: var(--ff-accent);
+  text-align: center;
+  color: var(--orange);
+}
+
+.game-field {
+  width: 33.125rem;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.game-field__result {
+  margin-bottom: var(--spacing-3xl);
+  font-size: var(--text-md);
+  text-align: center;
+}
+
+.game-field__scores,
+.options__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-field__scores {
+  margin-bottom: var(--spacing-4xl);
+}
+
+.score__container .player-picked,
+.options__container .button-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-100);
+  border: 10px solid var(--neutral-200);
+}
+
+.score__container .player-picked {
+  --dimension: 10.9375rem;
+
+  width: var(--dimension);
+  height: var(--dimension);
+  margin-bottom: calc(var(--spacing-lg) + 1px);
+  border-radius: var(--dimension);
+}
+
+.score__container .player-picked > img {
+  width: 4.12rem;
+}
+
+.score__container .player-score {
+  text-align: center;
+}
+
+.score__container .player-picked .not-start {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--neutral-300);
+}
+
+.options__container .button-options {
+  --dimension: 7.8125rem;
+
+  width: var(--dimension);
+  height: var(--dimension);
+  border-radius: var(--dimension);
+  cursor: pointer;
 }
