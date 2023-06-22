@@ -1,7 +1,9 @@
 const computerPlay = () => {
   const choices = ["rock", "paper", "scissors"];
   const randomIdx = Math.floor(Math.random() * choices.length);
-  return choices[randomIdx];
+  const choice = choices[randomIdx];
+  document.querySelector("[data-computer]").src = `./assets/icon-${choice}.svg`;
+  return choice;
 };
 
 const playRound = (playerPicked, computerPicked) => {
@@ -59,24 +61,43 @@ const game = (playerPicked) => {
   updateResult(result);
 };
 
+const changeClass = () => {
+  const hidden = document.querySelectorAll(".hidden");
+
+  for (let i = 0; i < hidden.length; i++) {
+    hidden[i].classList.remove("hidden");
+  }
+
+  const notStart = document.querySelectorAll(".not-start");
+
+  for (let i = 0; i < notStart.length; i++) {
+    notStart[i].classList.add("hidden");
+  }
+};
+
 const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorBtn = document.getElementById("scissor");
+
+const playerSelectionDisplay = document.querySelector("[data-human]");
 
 let playerScore = 0;
 let computerScore = 0;
 
 rockBtn.addEventListener("click", () => {
+  changeClass();
   game(rockBtn.value);
-  console.log("clicked");
+  playerSelectionDisplay.src = `./assets/icon-${rockBtn.value}.svg`;
 });
 
 paperBtn.addEventListener("click", () => {
+  changeClass();
+  playerSelectionDisplay.src = `./assets/icon-${paperBtn.value}.svg`;
   game(paperBtn.value);
-  console.log("clicked");
 });
 
 scissorBtn.addEventListener("click", () => {
   game(scissorBtn.value);
-  console.log("clicked");
+  playerSelectionDisplay.src = `./assets/icon-${scissorBtn.value}.svg`;
+  changeClass();
 });
