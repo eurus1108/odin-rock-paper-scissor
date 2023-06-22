@@ -28,7 +28,7 @@ const playRound = (playerPicked, computerPicked) => {
   }
 
   if (playerPicked === "scissors") {
-    if (computerPicked === "rock") {
+    if (computerPicked === "paper") {
       return "You win";
     } else {
       return "You lose";
@@ -59,6 +59,16 @@ const game = (playerPicked) => {
   }
 
   updateResult(result);
+
+  setInterval(() => {
+    if (playerScore === 5) {
+      alert("You win!");
+      location.href = location.href;
+    } else if (computerScore === 5) {
+      alert("You loose");
+      location.href = location.href;
+    }
+  }, 5000);
 };
 
 const changeClass = () => {
